@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Traductor</string>
+    <string name="before_activity_load">...</string>
 </resources>

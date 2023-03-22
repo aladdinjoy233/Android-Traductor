@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(String s) {
                 resultado.setText(s);
+
+//                Create a new Intent object and open SegundaActivity.class activity
+                Intent intent = new Intent(MainActivity.this, SegundaActivity.class);
+                intent.putExtra("palabra", s);
+                startActivity(intent);
             }
         });
 
